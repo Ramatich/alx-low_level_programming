@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -7,46 +7,41 @@
  */
 int main(void)
 {
-    long int fib1 = 1, fib2 = 2, next, sum = 0;
-
-    while (fib2 <= 4000000)
-    {
-        if (fib2 % 2 == 0)
-        {
-            sum += fib2;
-        }
-        next = fib1 + fib2;
-        fib1 = fib2;
-        fib2 = next;
-    }
-
-    printf("%ld\n", sum);
+    print_fibonacci();
     return (0);
 }
-#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * print_fibonacci - Print the first 98 Fibonacci numbers
  */
-int main(void)
+void print_fibonacci(void)
 {
     int i;
     unsigned long int fib1 = 1, fib2 = 2, next;
 
-    printf("%lu, %lu", fib1, fib2);
-
-    for (i = 3; i <= 98; i++)
+    for (i = 0; i < 98; i++)
     {
+        _putchar(fib1 / 1000000000 + '0');
+        _putchar(fib1 / 100000000 % 10 + '0');
+        _putchar(fib1 / 10000000 % 10 + '0');
+        _putchar(fib1 / 1000000 % 10 + '0');
+        _putchar(fib1 / 100000 % 10 + '0');
+        _putchar(fib1 / 10000 % 10 + '0');
+        _putchar(fib1 / 1000 % 10 + '0');
+        _putchar(fib1 / 100 % 10 + '0');
+        _putchar(fib1 / 10 % 10 + '0');
+        _putchar(fib1 % 10 + '0');
+
+        if (i < 97)
+        {
+            _putchar(',');
+            _putchar(' ');
+        }
+
         next = fib1 + fib2;
         fib1 = fib2;
         fib2 = next;
-
-        printf(", %lu", next);
     }
 
-    printf("\n");
-    return (0);
+    _putchar('\n');
 }
-
