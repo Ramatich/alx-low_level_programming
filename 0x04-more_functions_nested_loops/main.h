@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <math.h>
 
 int _isupper(int c);
 int mul(int a, int b);
@@ -13,7 +14,6 @@ void print_diagonal(int n);
 void print_square(int size);
 void fizz_buzz(void);
 void print_triangle(int size);
-
-
+int largest_prime_factor(long n);
 #endif /* MAIN_H */
 
