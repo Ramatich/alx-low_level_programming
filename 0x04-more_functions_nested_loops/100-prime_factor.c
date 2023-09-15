@@ -8,27 +8,23 @@
  */
 int largest_prime_factor(long n)
 {
-    int largest = -1;
-    int i;
+    int factor = 2;
+    int largest_prime = 0;
 
-    while (n % 2 == 0)
+    while (n > 1)
     {
-        largest = 2;
-        n /= 2;
-    }
-
-    for (i = 3; i <= sqrt(n); i += 2)
-    {
-        while (n % i == 0)
+        if (n % factor == 0)
         {
-            largest = i;
-            n /= i;
+            if (factor > largest_prime)
+                largest_prime = factor;
+            n /= factor;
+        }
+        else
+        {
+            factor++;
         }
     }
 
-    if (n > 2)
-        largest = n;
-
-    return (largest);
+    return (largest_prime);
 }
 

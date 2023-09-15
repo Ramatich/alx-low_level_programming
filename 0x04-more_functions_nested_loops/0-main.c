@@ -1,6 +1,4 @@
 #include "main.h"
-/* Add this line */
-#include <stdio.h>
 
 /**
  * main - Entry point
@@ -13,7 +11,8 @@ int main(void)
     int largest_prime;
 
     largest_prime = largest_prime_factor(n);
-    printf("%d\n", largest_prime);
+    _putchar('0' + largest_prime);
+    _putchar('\n');
 
     return (0);
 }
