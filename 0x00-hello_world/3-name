@@ -1,15 +1,3 @@
 #!/bin/bash
-
-# Set the C file name
-CFILE="main.c"
-
-# Compile the C file and create the executable named cisfun
-gcc -Wall -pedantic -Werror -Wextra "$CFILE" -o cisfun
-#!/bin/bash
-
-# Set the path to the C file relative to the script's location
-CFILE="$(dirname "$0")/main.c"
-
-# Compile the C file and create the executable named cisfun
-gcc -Wall -pedantic -Werror -Wextra "$CFILE" -o cisfun
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 "$CFILE" -o cisfun
 
