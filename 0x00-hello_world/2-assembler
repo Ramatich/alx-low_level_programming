@@ -1,4 +1,4 @@
 #!/bin/bash
-gcc -S -o "$(basename "$CFILE" .c)".s "$CFILE"
+gcc -S -o "${CFILE%.c}.s" "$CFILE"
 
 
