@@ -4,7 +4,7 @@
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
-void _isalpha(void);
+int _isalpha(int c);
 void print_last_digit(void);
 /* Function prototype for the add function */
 int add(int a, int b);
