@@ -14,5 +14,6 @@ void times_table(void);
 int print_sign(int n);
 /* Function prototype for the _islower function */
 int _islower(int c);
+void jack_bauer(void);
 #endif /* MAIN_H */
 
