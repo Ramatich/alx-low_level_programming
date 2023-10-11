@@ -1,47 +1,45 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0
- */
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
+*/
 int main(void)
 {
-    print_fibonacci();
-    return (0);
-}
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
 
-/**
- * print_fibonacci - Print the first 98 Fibonacci numbers
- */
-void print_fibonacci(void)
+for (inc = 0; inc < 92; inc++)
 {
-    int i;
-    unsigned long int fib1 = 1, fib2 = 2, next;
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
+}
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
+{
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
 
-    for (i = 0; i < 98; i++)
-    {
-        _putchar(fib1 / 1000000000 + '0');
-        _putchar(fib1 / 100000000 % 10 + '0');
-        _putchar(fib1 / 10000000 % 10 + '0');
-        _putchar(fib1 / 1000000 % 10 + '0');
-        _putchar(fib1 / 100000 % 10 + '0');
-        _putchar(fib1 / 10000 % 10 + '0');
-        _putchar(fib1 / 1000 % 10 + '0');
-        _putchar(fib1 / 100 % 10 + '0');
-        _putchar(fib1 / 10 % 10 + '0');
-        _putchar(fib1 % 10 + '0');
-
-        if (i < 97)
-        {
-            _putchar(',');
-            _putchar(' ');
-        }
-
-        next = fib1 + fib2;
-        fib1 = fib2;
-        fib2 = next;
-    }
-
-    _putchar('\n');
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
+}
+printf("\n");
+return (0);
 }
