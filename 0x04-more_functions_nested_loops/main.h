@@ -1,20 +1,21 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <math.h>
-
-int _isupper(int c);
-int mul(int a, int b);
-int _putchar(char c);
+/**
+*main - header file for protoypes
+*void protoypes (void)
+*int protoypes (int)
+*/
 void print_numbers(void);
 void print_most_numbers(void);
-int _putchar(char c);
 void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
-void fizz_buzz(void);
 void print_triangle(int size);
 void print_number(int n);
-int largest_prime_factor(long n);
-#endif /* MAIN_H */
+int _putchar(char);
+int _isupper(int);
+int _isdigit(int);
+int mul(int, int);
 
+#endif /* MAIN_H */

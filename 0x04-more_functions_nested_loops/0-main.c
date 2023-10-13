@@ -1,19 +1,14 @@
 #include "main.h"
+#include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
 int main(void)
 {
-    long n = 612852475143;
-    int largest_prime;
+    char c;
 
-    largest_prime = largest_prime_factor(n);
-    _putchar('0' + largest_prime);
-    _putchar('\n');
-
+    c = 'A';
+    printf("%c: %d\n", c, _isupper(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isupper(c));
     return (0);
 }
 
