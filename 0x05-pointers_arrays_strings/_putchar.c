@@ -1,18 +1,14 @@
-#include "main.h"
+#include <unistd.h>
 
 /**
-  * _puts - Prints a string
-  * @str: The string to print
-  *
-  * Return: void
-  */
-void _puts(char *str)
+ * _putchar - Writes a character to the standard output (stdout)
+ * @c: The character to write
+ *
+ * Return: On success, the number of characters written is returned.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
 {
-	for (; *str != '\0'; str++)
-	{
-		_putchar(*str);
-	}
-
-	_putchar('\n');
+    return write(1, &c, 1);
 }
 
