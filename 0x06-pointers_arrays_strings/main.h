@@ -13,6 +13,7 @@ char *cap_string(char *str);
 char *leet(char *);
 char *_strncat(char *dest, char *src, int n);
 char *rot13(char *str);
+void print_buffer(char *b, int size);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 #endif /* MAIN_H */
 
